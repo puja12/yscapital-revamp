@@ -9,6 +9,8 @@ import Process from "./components/Process"
 import WhyChoose from "./components/WhyChoose"
 import CTA from "./components/CTA"
 import Footer from "./components/Footer"
+import TrustProcessSection from "./components/TrustProcessSection"
+import InsightsCalculators from "./components/InsightsCalculators"
 
 export default function App() {
   return (
@@ -20,8 +22,8 @@ export default function App() {
       <DigitalAccess />
       <Audience />
       <Services />
-      <Process />
-      <WhyChoose />
+      <TrustProcessSection />
+      <InsightsCalculators />
       <CTA />
       <Footer />
     </main>

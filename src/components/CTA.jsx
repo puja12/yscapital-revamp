@@ -1,41 +1,43 @@
 import { ArrowRight, Phone } from "lucide-react"
+import ctaBg from "../assets/cta-mountain-bg.png"
 
 export default function CTA() {
     return (
-        <section className="bg-white px-6 pt-[8px]">
-            <div className="relative mx-auto flex max-w-[1180px] flex-col items-start justify-between overflow-hidden rounded-t-[24px] rounded-b-none bg-[#0038a8] px-[68px] py-[20px] text-white md:flex-row md:items-center">
+        <section className="bg-white px-0 py-0">
+            <div className="relative mx-auto flex min-h-[92px] max-w-[1530px] items-center overflow-hidden border border-[#123d85] bg-[#003b9e] px-[285px] text-white">
+                {/* BACKGROUND IMAGE */}
+                <img
+                    src={ctaBg}
+                    alt=""
+                    className="absolute inset-0 h-full w-full object-cover object-center opacity-[0.72]"
+                />
 
-                <div className="absolute inset-0 opacity-[0.12]">
-                    <div className="absolute left-[-70px] top-[-45px] h-[180px] w-[420px] rounded-full border border-white/40" />
-                    <div className="absolute left-[-35px] top-[-15px] h-[150px] w-[380px] rounded-full border border-white/30" />
-                    <div className="absolute right-[-120px] top-[-60px] h-[220px] w-[420px] rounded-full border border-white/30" />
-                    <div className="absolute right-[-80px] top-[-20px] h-[180px] w-[360px] rounded-full border border-white/20" />
-                </div>
+                {/* BLUE OVERLAY */}
+                <div className="absolute inset-0 bg-[#003b9e]/48" />
 
-                <div className="relative z-10">
-                    <h2 className="font-serif text-[31px] font-normal leading-[1.06] tracking-[-0.8px] text-white md:text-[35px]">
-                        Ready to Build
-                        <br />
-                        Your Financial Future?
-                    </h2>
-                </div>
+                {/* CONTENT */}
+                <div className="relative z-10 flex w-full items-center justify-between">
+                    <div>
+                        <h2 className="font-serif text-[30px] font-normal leading-none tracking-[-0.4px] text-white">
+                            Ready To Build Your Financial Future?
+                        </h2>
 
-                <div className="relative z-10 mt-5 max-w-[340px] md:mt-0">
-                    <p className="text-[14px] font-normal leading-[23px] text-white/95">
-                        Connect with our advisors and discover a disciplined approach to wealth creation and preservation.
-                    </p>
-                </div>
+                        <p className="mt-[12px] text-[14px] font-medium leading-none text-white/85">
+                            Let’s create a strategy that works for you and your family.
+                        </p>
+                    </div>
 
-                <div className="relative z-10 mt-6 flex w-full flex-col gap-[8px] md:mt-0 md:w-auto">
-                    <button className="flex h-[42px] min-w-[245px] items-center justify-center gap-3 rounded-[5px] bg-[#c9971d] px-8 text-[13px] font-semibold text-white shadow-[0_8px_18px_rgba(0,0,0,0.15)]">
-                        Schedule a Consultation
-                        <ArrowRight size={15} strokeWidth={2.4} />
-                    </button>
+                    <div className="flex items-center gap-[18px]">
+                        <button className="flex h-[50px] min-w-[222px] items-center justify-center gap-[10px] rounded-[4px] bg-[#c9971d] px-[24px] text-[15px] font-semibold text-white shadow-[0_8px_18px_rgba(0,0,0,0.22)]">
+                            Schedule Consultation
+                            <ArrowRight size={18} strokeWidth={2.4} />
+                        </button>
 
-                    <button className="flex h-[42px] min-w-[245px] items-center justify-center gap-2 rounded-[5px] border border-white/55 bg-transparent px-8 text-[13px] font-semibold text-white">
-                        Call Us Now
-                        <Phone size={13} strokeWidth={2.4} />
-                    </button>
+                        <button className="flex h-[50px] min-w-[172px] items-center justify-center gap-[10px] rounded-[4px] border border-white/55 bg-[#002b7a]/25 px-[24px] text-[15px] font-semibold text-white">
+                            <Phone size={17} strokeWidth={2.4} />
+                            Call Us Today
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>

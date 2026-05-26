@@ -1,82 +1,80 @@
-import { BarChart3, HandCoins, ShieldCheck, ArrowRight } from "lucide-react"
+import { Sprout, BadgeIndianRupee, Shield, ArrowRight } from "lucide-react"
 
 const cards = [
     {
-        icon: BarChart3,
+        icon: Sprout,
         title: "Wealth Creation",
         text: "For long-term capital appreciation through diversified equity exposure.",
-        color: "bg-[#003b9e]",
+        iconBg: "bg-[#003b9e]",
+        cardBg: "bg-[#eef5ff]",
     },
     {
-        icon: HandCoins,
+        icon: BadgeIndianRupee,
         title: "Income Generation",
         text: "Designed for investors seeking stable and predictable cash flows.",
-        color: "bg-[#c9971d]",
+        iconBg: "bg-[#c9971d]",
+        cardBg: "bg-[#fff5df]",
     },
     {
-        icon: ShieldCheck,
+        icon: Shield,
         title: "Capital Preservation",
         text: "Focused on protecting wealth while maintaining reasonable growth.",
-        color: "bg-[#003b9e]",
+        iconBg: "bg-[#2f7d26]",
+        cardBg: "bg-[#eef7ef]",
     },
 ]
 
 export default function Portfolio() {
     return (
-        <section className="bg-white px-6 py-[58px] text-center">
-            <p className="text-[12px] font-bold uppercase tracking-[0.4px] text-[#c9971d]">
-                PORTFOLIO MANAGEMENT
-            </p>
+        <section className="relative overflow-hidden bg-white px-6 py-[52px]">
 
-            <h2 className="mt-2 font-serif text-[34px] font-bold leading-tight text-[#08245c]">
-                Investment Portfolios Built Around Your Life Goals
-            </h2>
 
-            <p className="mx-auto mt-4 max-w-[710px] text-[15px] leading-[26px] text-slate-500">
-                No two investors are alike. We design investment portfolios aligned with your goals,
-                <br className="hidden md:block" />
-                risk appetite, liquidity needs and long-term aspirations.
-            </p>
+            <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-[48px] lg:grid-cols-[1fr_2fr]">
+                {/* LEFT TEXT */}
+                <div className="self-start pt-[16px] text-left">
+                    <p className="text-[13px] font-bold uppercase tracking-[0.5px] text-[#c9971d]">
+                        PORTFOLIO MANAGEMENT
+                    </p>
 
-            <div className="mx-auto mt-[34px] grid max-w-[1110px] grid-cols-1 gap-[34px] md:grid-cols-3">
-                {cards.map((card) => {
-                    const Icon = card.icon
+                    <h2 className="mt-[14px] max-w-[520px] font-serif text-[33px] font-normal leading-[1.16] tracking-[-0.7px] text-[#071f52]">
+                        Investment Portfolios
+                        <br />
+                        Built Around Your Life Goals
+                    </h2>
+                </div>
 
-                    return (
-                        <div
-                            key={card.title}
-                            className="min-h-[158px] rounded-[14px] border border-[#e3e6ee] bg-white px-[38px] py-[30px] text-left shadow-[0_1px_8px_rgba(15,23,42,0.04)]"
-                        >
-                            <div className="flex items-start gap-[26px]">
+                {/* CARDS */}
+                <div className="grid grid-cols-1 gap-[18px] md:grid-cols-3">
+                    {cards.map((card) => {
+                        const Icon = card.icon
+
+                        return (
+                            <div
+                                key={card.title}
+                                className={`flex min-h-[238px] flex-col items-center justify-center rounded-[16px] ${card.cardBg} px-[30px] py-[28px] text-center`}
+                            >
                                 <div
-                                    className={`flex h-[64px] w-[64px] shrink-0 items-center justify-center rounded-full ${card.color} text-white shadow-[inset_0_0_0_1px_rgba(255,255,255,0.18)]`}
+                                    className={`flex h-[76px] w-[76px] items-center justify-center rounded-full ${card.iconBg} text-white shadow-[inset_0_0_0_1px_rgba(255,255,255,0.22)]`}
                                 >
-                                    <Icon size={30} strokeWidth={1.9} />
+                                    <Icon size={38} strokeWidth={1.7} />
                                 </div>
 
-                                <div className="pt-[2px]">
-                                    <h3 className="font-serif text-[20px] font-bold leading-none text-[#08245c]">
-                                        {card.title}
-                                    </h3>
+                                <h3 className="mt-[18px] whitespace-nowrap text-[19px] font-bold leading-tight text-[#071f52]">
+                                    {card.title}
+                                </h3>
 
-                                    <p className="mt-[15px] max-w-[190px] text-[13.5px] font-medium leading-[23px] text-slate-600">
-                                        {card.text}
-                                    </p>
+                                <p className="mt-[10px] max-w-[220px] text-[13.5px] font-medium leading-[21px] text-slate-700">
+                                    {card.text}
+                                </p>
 
-                                    <button className="mt-[16px] flex items-center gap-[6px] text-[13px] font-bold text-[#2457d6]">
-                                        Learn More
-                                        <ArrowRight size={14} strokeWidth={2.6} />
-                                    </button>
-                                </div>
+                                <button className="mt-[18px] text-[#071f52]">
+                                    <ArrowRight size={28} strokeWidth={2.5} />
+                                </button>
                             </div>
-                        </div>
-                    )
-                })}
+                        )
+                    })}
+                </div>
             </div>
-
-            <button className="mt-[30px] rounded-[5px] bg-[#003b9e] px-[42px] py-[13px] text-[14px] font-semibold text-white shadow-[0_8px_18px_rgba(0,59,158,0.25)]">
-                Discuss Your Portfolio
-            </button>
-        </section>
+        </section >
     )
 }

@@ -1,110 +1,99 @@
-import { ArrowRight, BarChart3, TrendingUp } from "lucide-react"
-import heroBg from "../assets/sky-city-background.png"
+import {
+    ArrowRight,
+    ShieldCheck,
+    Landmark,
+    Users,
+    IndianRupee,
+    SearchCheck,
+    HandCoins,
+} from "lucide-react"
+
+import heroBg from "../assets/serene-sunset-with-stones-background.png"
+
+const stats = [
+    [ShieldCheck, "AMFI Registered", "Mutual Fund Distributor"],
+    [Landmark, "AMFI Registered", "SIF Distributor"],
+    [Users, "500+", "Families Served"],
+    [IndianRupee, "₹ XXX Cr+", "Assets Guided"],
+    [SearchCheck, "Research Driven", "Investments"],
+    [HandCoins, "Personalized", "Advisory"],
+]
 
 export default function Hero() {
     return (
-        <section className="relative min-h-[560px] overflow-hidden bg-white pt-[105px]">
+        <section className="relative min-h-[700px] overflow-hidden bg-white pt-[92px]">
+            {/* BACKGROUND IMAGE */}
+            <img
+                src={heroBg}
+                alt=""
+                className="absolute inset-0 h-full w-full object-cover object-center"
+            />
 
-            {/* HERO BACKGROUND */}
-            <div className="absolute inset-0 overflow-hidden">
+            {/* light overlay */}
+            <div className="absolute inset-0 bg-white/10" />
 
-                {/* MAIN IMAGE */}
-                <img
-                    src={heroBg}
-                    alt=""
-                    className="absolute right-[-40px] bottom-0 h-full w-[104%] object-contain object-right-bottom opacity-95"
-                />
-
-                {/* SMOOTH LEFT SUBMERGE */}
-                <div className="absolute inset-y-0 left-0 w-[62%] bg-gradient-to-r from-white from-[0%] via-white via-[52%] to-transparent to-[82%]" />
-
-                {/* EXTRA BLEND LAYER */}
-                <div className="absolute left-[33%] top-[8%] h-[420px] w-[420px] rounded-full bg-white/95 blur-[115px]" />
-
-                {/* LOWER ATMOSPHERIC BLEND */}
-                <div className="absolute left-[36%] bottom-[2%] h-[240px] w-[360px] rounded-full bg-white/80 blur-[90px]" />
-                {/* BOTTOM FADE */}
-                <div className="absolute inset-x-0 bottom-0 h-[170px] bg-gradient-to-t from-white via-white/70 to-transparent" />
-
-            </div>
-            <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center px-6 lg:grid-cols-2">
-                {/* LEFT CONTENT */}
-                <div className="z-10 pb-20 pt-12 lg:pb-24">
-                    <h1 className="font-serif text-[38px] font-bold leading-[1.12] tracking-[-0.4px] text-[#071f52] md:text-[46px] lg:text-[52px]">
+            <div className="relative mx-auto max-w-7xl px-8">
+                {/* CONTENT */}
+                <div className="max-w-[540px] pt-[82px]">
+                    <h1 className="font-serif text-[54px] font-normal leading-[1.05] tracking-[-1.4px] text-[#071f52]">
                         Growing Wealth.
                         <br />
-
-                        <span className="block whitespace-nowrap text-[#003b9e]">
+                        <span className="text-[#c9971d]">
                             Preserving Legacies.
                         </span>
                     </h1>
 
-                    <div className="mt-6 h-[2px] w-20 bg-[#d4a128]" />
+                    <div className="mt-[22px] h-[2px] w-[66px] bg-[#c9971d]" />
 
-                    <p className="mt-7 max-w-[520px] text-[17px] leading-8 text-slate-700">
-                        Helping HNIs, Professionals and Business Families build disciplined
-                        investment portfolios through Mutual Funds, SIFs and Goal-Based
-                        Strategies.
+                    <p className="mt-[22px] max-w-[470px] text-[16px] font-medium leading-[25px] text-[#061d49]">
+                        Helping HNIs, professionals and business families build disciplined
+                        investment portfolios through Mutual Funds, SIFs and goal-based
+                        wealth strategies.
                     </p>
 
-                    <div className="mt-8 flex flex-wrap gap-4">
-                        <button className="flex items-center gap-3 rounded-md bg-[#003b9e] px-7 py-4 text-sm font-bold text-white shadow-xl shadow-blue-900/20 transition hover:bg-[#002f7d]">
-                            Schedule a Consultation
-                            <ArrowRight size={17} />
+                    <div className="mt-[28px] flex gap-4">
+                        <button className="flex h-[46px] items-center gap-3 rounded-[5px] bg-[#003b9e] px-[24px] text-[13px] font-bold text-white shadow-[0_12px_24px_rgba(0,59,158,0.24)]">
+                            Schedule Consultation
+                            <ArrowRight size={15} />
                         </button>
 
-                        <button className="flex items-center gap-3 rounded-md border border-[#003b9e] bg-white px-7 py-4 text-sm font-bold text-[#003b9e] transition hover:bg-[#f3f7ff]">
+                        <button className="flex h-[46px] items-center gap-3 rounded-[5px] border border-[#003b9e] bg-white/80 px-[24px] text-[13px] font-bold text-[#003b9e] backdrop-blur-sm">
                             Explore Services
-                            <ArrowRight size={17} />
+                            <ArrowRight size={15} />
                         </button>
                     </div>
                 </div>
 
-                {/* RIGHT VISUAL AREA */}
-                <div className="absolute bottom-8 right-4 w-[255px] rounded-[10px] border border-white/90 bg-white p-[18px] shadow-[0_18px_35px_rgba(30,64,175,0.25)]">
-                    <div className="flex items-start justify-between">
-                        <div>
-                            <p className="text-[12px] font-bold leading-none text-[#003b9e]">
-                                Your Wealth Journey
-                            </p>
 
-                            <p className="mt-[9px] text-[11px] font-medium leading-none text-slate-500">
-                                Long Term Growth
-                            </p>
-                        </div>
-
-                        <div className="flex h-[48px] w-[48px] items-center justify-center rounded-full bg-[#eef4ff] text-[#1d4ed8]">
-                            <BarChart3 size={24} strokeWidth={2.3} />
-                        </div>
-                    </div>
-
-                    <div className="mt-[13px] flex items-end gap-[6px]">
-                        <h3 className="text-[34px] font-bold leading-none tracking-[-1px] text-[#071f52]">
-                            15.8%
-                        </h3>
-
-                        <span className="mb-[5px] text-[10px] font-bold uppercase tracking-wide text-slate-500">
-                            XIRR
-                        </span>
-                    </div>
-
-                    <p className="mt-[7px] text-[11px] font-medium leading-none text-slate-500">
-                        Since Inception
-                    </p>
-
-                    <div className="mt-[17px] h-[42px] w-full overflow-hidden rounded-sm bg-gradient-to-t from-[#eaf2ff] to-white">
-                        <svg viewBox="0 0 220 42" className="h-full w-full">
-                            <path
-                                d="M2 31 C18 29 25 32 40 27 C57 20 69 25 84 20 C101 14 114 19 128 17 C144 15 153 11 168 15 C183 19 191 12 204 8 C211 6 216 7 220 4"
-                                fill="none"
-                                stroke="#2f6de0"
-                                strokeWidth="3"
-                                strokeLinecap="round"
+            </div>
+            {/* STATS BAR */}
+            <div className="absolute bottom-[15px] left-1/2 w-full max-w-7xl -translate-x-1/2 rounded-[16px] border border-white/12 bg-[#02122b]/68 px-6 py-[16px] shadow-[0_20px_40px_rgba(1,8,20,0.18)] backdrop-blur-[10px]">
+                <div className="grid grid-cols-6">
+                    {stats.map(([Icon, title, sub], index) => (
+                        <div
+                            key={title + sub}
+                            className={`flex flex-col items-center justify-center px-4 text-center ${index !== stats.length - 1
+                                ? "border-r border-white/12"
+                                : ""
+                                }`}
+                        >
+                            <Icon
+                                size={34}
+                                strokeWidth={1.7}
+                                className="mb-3 text-[#d4a128]"
                             />
-                        </svg>
-                    </div>
+
+                            <h4 className="text-[13px] font-bold leading-tight text-white">
+                                {title}
+                            </h4>
+
+                            <p className="mt-1 text-[12px] leading-tight text-white/90">
+                                {sub}
+                            </p>
+                        </div>
+                    ))}
                 </div>
             </div>
-        </section>
+        </section >
     )
 }

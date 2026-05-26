@@ -108,9 +108,6 @@ export default function Footer() {
                         />
                     </div>
 
-                    <button className="mt-[18px] flex h-[36px] items-center gap-[8px] rounded-[4px] bg-[#c9971d] px-[16px] text-[11px] font-semibold text-white shadow-[0_8px_16px_rgba(0,0,0,0.18)]">
-                        Schedule Consultation
-                    </button>
                 </div>
 
                 {/* AMFI */}

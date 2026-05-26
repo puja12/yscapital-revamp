@@ -69,13 +69,15 @@ export default function DigitalAccess() {
 
 function Feature({ text }) {
     return (
-        <div className="flex items-center gap-[9px] text-[13.5px] font-semibold text-[#061d49]">
+        <div className="flex items-start gap-[9px] text-[13.5px] font-semibold leading-[20px] text-[#061d49]">
             <CheckCircle
                 size={17}
                 strokeWidth={2.5}
-                className="shrink-0 fill-[#003b9e] text-white"
+                className="mt-[2px] shrink-0 fill-[#003b9e] text-white"
             />
+
             <span>{text}</span>
         </div>
     )
+
 }

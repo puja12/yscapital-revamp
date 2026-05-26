@@ -13,37 +13,43 @@ const services = [
         icon: ClipboardList,
         title: "Mutual Fund Advisory",
         text: "Research-backed solutions across market cycles.",
-        color: "bg-[#003b9e]",
+        color: "bg-[#eef2f7]",
+        iconColor: "text-[#5b6578]",
     },
     {
         icon: Landmark,
         title: "SIF Solutions",
         text: "Access curated Structured Investment Opportunities.",
-        color: "bg-[#c9971d]",
+        color: "bg-[#eef2f7]",
+        iconColor: "text-[#5b6578]",
     },
     {
         icon: Target,
         title: "Goal Planning",
         text: "Plan for your life goals with clarity and confidence.",
-        color: "bg-[#3f7f32]",
+        color: "bg-[#eef2f7]",
+        iconColor: "text-[#5b6578]",
     },
     {
         icon: BadgePercent,
         title: "Tax-Efficient Investing",
         text: "Optimise returns through smart tax strategies.",
-        color: "bg-[#003b9e]",
+        color: "bg-[#eef2f7]",
+        iconColor: "text-[#5b6578]",
     },
     {
         icon: BarChart3,
         title: "Portfolio Review",
         text: "Review and rebalance for better outcomes.",
-        color: "bg-[#c9971d]",
+        color: "bg-[#eef2f7]",
+        iconColor: "text-[#5b6578]",
     },
     {
         icon: Users,
         title: "Family Wealth Planning",
         text: "Multi-generational wealth planning & governance.",
-        color: "bg-[#3f7f32]",
+        color: "bg-[#eef2f7]",
+        iconColor: "text-[#5b6578]",
     },
 ]
 
@@ -68,7 +74,7 @@ export default function Services() {
                             className="flex min-h-[185px] flex-col items-center rounded-[10px] border border-[#e1e5ee] bg-white px-[18px] py-[20px] text-center shadow-[0_2px_8px_rgba(15,23,42,0.03)]"
                         >
                             <div
-                                className={`flex h-[46px] w-[46px] items-center justify-center rounded-full ${service.color} text-white shadow-[inset_0_0_0_1px_rgba(255,255,255,0.18)]`}
+                                className={`flex h-[46px] w-[46px] items-center justify-center rounded-full ${service.color} ${service.iconColor}`}
                             >
                                 <Icon size={24} strokeWidth={1.8} />
                             </div>

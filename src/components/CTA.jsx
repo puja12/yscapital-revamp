@@ -4,7 +4,7 @@ import ctaBg from "../assets/cta-mountain-bg.png"
 export default function CTA() {
     return (
         <section className="bg-white px-0 py-0">
-            <div className="relative mx-auto flex min-h-[92px] max-w-[1530px] items-center overflow-hidden border border-[#123d85] bg-[#003b9e] px-[285px] text-white">
+            <div className="relative mx-auto flex min-h-[130px] max-w-[1530px] items-center overflow-hidden border border-[#123d85] bg-[#003b9e] px-[245px] text-white">
                 {/* BACKGROUND IMAGE */}
                 <img
                     src={ctaBg}

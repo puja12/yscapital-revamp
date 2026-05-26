@@ -12,13 +12,8 @@ export default function Hero() {
                     className="absolute right-0 bottom-0 h-full w-[78%] object-contain object-right-bottom opacity-95"
                 />
 
-                {/* left white fade */}
-                <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/20" />
-
-                {/* top soft fade */}
-                <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-[#eef5ff]/50" />
+                <div className="absolute inset-0 bg-gradient-to-r from-white via-white/35 to-transparent" />
             </div>
-
             <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center px-6 lg:grid-cols-2">
                 {/* LEFT CONTENT */}
                 <div className="z-10 pb-20 pt-12 lg:pb-24">

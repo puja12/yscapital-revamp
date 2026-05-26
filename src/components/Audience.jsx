@@ -83,7 +83,10 @@ export default function Audience() {
                         className="h-full w-full object-cover object-right-center"
                     />
 
-                    <div className="absolute inset-y-0 left-0 w-[260px] bg-gradient-to-r from-[#002763] via-[#002763]/75 to-transparent" />
+                    <div className="absolute inset-y-0 left-0 w-[200px] bg-gradient-to-r from-[#002763] from-[0%] via-[#002763]/95 via-[38%] via-[#002763]/65 via-[62%] to-transparent to-[100%]" />
+
+                    <div className="absolute inset-y-0 left-[-80px] w-[260px] bg-[#002763]/80 blur-[55px]" />
+
                 </div>
             </div>
         </section>

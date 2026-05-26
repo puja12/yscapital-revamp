@@ -15,7 +15,7 @@ const featuresRight = [
 
 export default function DigitalAccess() {
     return (
-        <section className="relative overflow-hidden bg-[#eef6ff] px-0 py-[28px]">
+        <section className="relative overflow-hidden bg-[linear-gradient(180deg,#edf4fd_0%,#f4f8ff_100%)] px-0 py-[28px]">
             <div className="mx-auto grid max-w-7xl grid-cols-1 items-center lg:grid-cols-[0.9fr_1.45fr]">
                 {/* LEFT CONTENT */}
                 <div className="z-10 px-8 lg:pl-[34px]">

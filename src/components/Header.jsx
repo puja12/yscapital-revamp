@@ -24,7 +24,7 @@ export default function Header() {
                     />
 
                     <nav className="hidden items-center gap-8 text-[14px] font-semibold text-[#061d49] lg:flex">
-                        <a href="#" className="transition hover:text-[#003b9e]">
+                        <a href="#" className="transition hover:text-[#c9971d]">
                             Why Us
                         </a>
 
@@ -56,19 +56,19 @@ export default function Header() {
                             </div>
                         </div>
 
-                        <a href="#" className="transition hover:text-[#003b9e]">
+                        <a href="#" className="transition hover:text-[#c9971d]">
                             Calculators
                         </a>
 
                         <a
                             href="#"
-                            className="flex items-center gap-1 transition hover:text-[#003b9e]"
+                            className="flex items-center gap-1 transition hover:text-[#c9971d]"
                         >
                             Media
 
                         </a>
 
-                        <a href="#" className="transition hover:text-[#003b9e]">
+                        <a href="#" className="transition hover:text-[#c9971d]">
                             Portfolio Management
                         </a>
                     </nav>

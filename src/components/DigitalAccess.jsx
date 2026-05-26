@@ -1,4 +1,5 @@
 import { ArrowRight, CheckCircle } from "lucide-react"
+import bgTexture from "../assets/background-img.png"
 import deviceImage from "../assets/digital-access-devices.png"
 
 const featuresLeft = [
@@ -15,7 +16,16 @@ const featuresRight = [
 
 export default function DigitalAccess() {
     return (
-        <section className="relative overflow-hidden bg-[linear-gradient(180deg,#edf4fd_0%,#f4f8ff_100%)] px-0 py-[28px]">
+        <section className="relative overflow-hidden px-0 py-[28px]">
+            {/* BACKGROUND IMAGE */}
+            <img
+                src={bgTexture}
+                alt=""
+                className="absolute inset-0 h-full w-full object-cover opacity-100"
+            />
+
+            {/* LIGHT OVERLAY */}
+            <div className="absolute inset-0 bg-white/[0.04]" />
             <div className="mx-auto grid max-w-7xl grid-cols-1 items-center lg:grid-cols-[0.9fr_1.45fr]">
                 {/* LEFT CONTENT */}
                 <div className="z-10 px-8 lg:pl-[34px]">

@@ -1,166 +1,101 @@
 import { ArrowRight, BarChart3, TrendingUp } from "lucide-react"
+import heroBg from "../assets/sky-city-background.png"
 
 export default function Hero() {
     return (
-        <section className="relative overflow-hidden bg-white pt-24 pb-12 min-h-[620px]">
+        <section className="relative overflow-hidden bg-white pt-28 lg:pt-32">
+            {/* HERO BACKGROUND */}
+            <div className="absolute inset-0">
+                <img
+                    src={heroBg}
+                    alt=""
+                    className="absolute right-0 bottom-0 h-full w-[78%] object-contain object-right-bottom opacity-95"
+                />
 
-            <div className="absolute inset-0 bg-gradient-to-r from-white via-white to-blue-50"></div>
+                {/* left white fade */}
+                <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/20" />
 
-            {/* CITY SKYLINE - MORE VISIBLE */}
-            <div className="absolute right-0 bottom-0 w-[65%] h-[500px] opacity-55">
-
-                {/* skyline glow */}
-                <div className="absolute inset-0 bg-gradient-to-t from-blue-100/60 via-blue-50/40 to-transparent"></div>
-
-                {/* buildings */}
-                <div className="absolute bottom-0 left-[5%] w-10 h-44 bg-blue-200/80 rounded-t-sm"></div>
-                <div className="absolute bottom-0 left-[11%] w-14 h-64 bg-blue-100/90 rounded-t-sm"></div>
-                <div className="absolute bottom-0 left-[19%] w-8 h-80 bg-blue-200/80 rounded-t-sm"></div>
-                <div className="absolute bottom-0 left-[25%] w-16 h-56 bg-blue-100/90 rounded-t-sm"></div>
-                <div className="absolute bottom-0 left-[35%] w-12 h-96 bg-blue-200/75 rounded-t-sm"></div>
-                <div className="absolute bottom-0 left-[44%] w-20 h-72 bg-blue-100/90 rounded-t-sm"></div>
-                <div className="absolute bottom-0 left-[57%] w-12 h-88 bg-blue-200/80 rounded-t-sm"></div>
-                <div className="absolute bottom-0 left-[67%] w-16 h-64 bg-blue-100/90 rounded-t-sm"></div>
-                <div className="absolute bottom-0 left-[79%] w-10 h-80 bg-blue-200/80 rounded-t-sm"></div>
-
-                {/* tower */}
-                <div className="absolute bottom-0 left-[31%] w-6 h-[430px] bg-blue-100/70"></div>
-                <div className="absolute bottom-[430px] left-[31.7%] w-3 h-20 bg-blue-200/70"></div>
+                {/* top soft fade */}
+                <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-[#eef5ff]/50" />
             </div>
 
-            {/* MOUNTAIN BASE */}
-            <div className="absolute right-0 bottom-0 w-[68%] h-[190px] opacity-45">
-                <svg viewBox="0 0 900 260" className="w-full h-full">
-                    <path
-                        d="M0 210 L110 160 L190 195 L310 115 L420 175 L540 90 L650 150 L760 70 L900 135 L900 260 L0 260 Z"
-                        fill="#bfdbfe"
-                    />
-                </svg>
-            </div>
-
-            {/* BAR CHART - BIGGER & CLEAR */}
-            <div className="absolute right-12 bottom-16 hidden lg:flex items-end gap-4 opacity-90">
-                {[150, 200, 250, 300, 350].map((height, index) => (
-                    <div
-                        key={index}
-                        className="w-8 rounded-t-md bg-gradient-to-t from-blue-500/50 to-blue-100/80 shadow-lg"
-                        style={{ height }}
-                    ></div>
-                ))}
-            </div>
-
-            {/* RISING LINES */}
-            <div className="absolute right-0 top-20 hidden lg:block w-[68%] h-[420px]">
-                <svg viewBox="0 0 900 430" className="w-full h-full">
-                    <path
-                        d="M0 345 C100 320 130 275 220 285 C300 295 330 215 410 245 C500 280 520 170 610 190 C690 210 700 95 765 115 C830 135 855 55 900 25"
-                        fill="none"
-                        stroke="#d4a017"
-                        strokeWidth="4"
-                    />
-
-                    <path
-                        d="M0 385 C120 360 150 330 240 345 C330 360 345 285 430 315 C520 345 550 245 625 265 C705 285 725 220 785 230 C845 240 870 185 900 160"
-                        fill="none"
-                        stroke="#2563eb"
-                        strokeWidth="3"
-                    />
-
-                    <circle
-                        cx="900"
-                        cy="25"
-                        r="9"
-                        fill="white"
-                        stroke="#d4a017"
-                        strokeWidth="4"
-                    />
-                </svg>
-            </div>
-
-            <div className="relative max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center min-h-[500px]">
-
+            <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center px-6 lg:grid-cols-2">
                 {/* LEFT CONTENT */}
-                <div>
-                    <h1 className="text-4xl md:text-6xl font-serif font-bold leading-tight text-[#0b1b3f]">
-                        Building Digital.
+                <div className="z-10 pb-20 pt-12 lg:pb-24">
+                    <h1 className="font-serif text-[44px] font-bold leading-[1.12] text-[#071f52] md:text-[64px] lg:text-[68px]">
+                        Growing Wealth.
                         <br />
-                        <span className="text-blue-700">
-                            Preserving Growth.
+
+                        <span className="block whitespace-nowrap text-[#003b9e]">
+                            Preserving Legacies.
                         </span>
                     </h1>
 
-                    <div className="mt-5 h-[2px] w-20 bg-yellow-500"></div>
+                    <div className="mt-6 h-[2px] w-20 bg-[#d4a128]" />
 
-                    <p className="mt-7 max-w-xl text-base md:text-lg leading-8 text-slate-700">
-                        We help businesses build modern websites, ecommerce platforms,
-                        business software, intranet solutions, and digital systems that
-                        improve operations and growth.
+                    <p className="mt-7 max-w-[520px] text-[17px] leading-8 text-slate-700">
+                        Helping HNIs, Professionals and Business Families build disciplined
+                        investment portfolios through Mutual Funds, SIFs and Goal-Based
+                        Strategies.
                     </p>
 
                     <div className="mt-8 flex flex-wrap gap-4">
-                        <button className="flex items-center gap-3 rounded-md bg-blue-700 px-7 py-4 text-sm font-bold text-white shadow-lg shadow-blue-700/25">
+                        <button className="flex items-center gap-3 rounded-md bg-[#003b9e] px-7 py-4 text-sm font-bold text-white shadow-xl shadow-blue-900/20 transition hover:bg-[#002f7d]">
                             Schedule a Consultation
-                            <ArrowRight size={18} />
+                            <ArrowRight size={17} />
                         </button>
 
-                        <button className="flex items-center gap-3 rounded-md border-2 border-blue-600 bg-white px-7 py-4 text-sm font-bold text-blue-700">
+                        <button className="flex items-center gap-3 rounded-md border border-[#003b9e] bg-white px-7 py-4 text-sm font-bold text-[#003b9e] transition hover:bg-[#f3f7ff]">
                             Explore Services
-                            <ArrowRight size={18} />
+                            <ArrowRight size={17} />
                         </button>
                     </div>
                 </div>
 
-                {/* FLOATING CARD */}
-                <div className="relative hidden lg:block h-[440px]">
-                    <div className="absolute right-4 bottom-5 w-[265px] rounded-xl bg-white p-6 shadow-2xl border border-slate-100">
+                {/* RIGHT VISUAL AREA */}
+                <div className="absolute bottom-8 right-4 w-[255px] rounded-[10px] border border-white/90 bg-white p-[18px] shadow-[0_18px_35px_rgba(30,64,175,0.25)]">
+                    <div className="flex items-start justify-between">
+                        <div>
+                            <p className="text-[12px] font-bold leading-none text-[#003b9e]">
+                                Your Wealth Journey
+                            </p>
 
-                        <div className="flex justify-between items-start">
-                            <div>
-                                <p className="text-sm font-bold text-blue-700">
-                                    Your Digital Journey
-                                </p>
-                                <p className="mt-1 text-xs text-slate-500">
-                                    Business Growth
-                                </p>
-                            </div>
-
-                            <div className="h-12 w-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-700">
-                                <BarChart3 size={24} />
-                            </div>
-                        </div>
-
-                        <div className="mt-5 flex items-end gap-2">
-                            <h3 className="text-4xl font-black text-[#0b1b3f]">
-                                15+
-                            </h3>
-                            <p className="mb-1 text-sm font-bold text-slate-500">
-                                Years
+                            <p className="mt-[9px] text-[11px] font-medium leading-none text-slate-500">
+                                Long Term Growth
                             </p>
                         </div>
 
-                        <p className="mt-1 text-sm text-slate-500">
-                            Since Inception
-                        </p>
-
-                        <div className="mt-5 h-12">
-                            <svg viewBox="0 0 240 60" className="w-full h-full">
-                                <path
-                                    d="M0 40 C30 35 45 45 70 30 C100 12 120 35 150 25 C180 15 190 25 215 12 C225 7 235 8 240 5"
-                                    fill="none"
-                                    stroke="#2563eb"
-                                    strokeWidth="4"
-                                />
-                            </svg>
+                        <div className="flex h-[48px] w-[48px] items-center justify-center rounded-full bg-[#eef4ff] text-[#1d4ed8]">
+                            <BarChart3 size={24} strokeWidth={2.3} />
                         </div>
+                    </div>
 
-                        <div className="mt-3 flex items-center gap-2 text-green-600 text-sm font-bold">
-                            <TrendingUp size={17} />
-                            Growth Focused Solutions
-                        </div>
+                    <div className="mt-[13px] flex items-end gap-[6px]">
+                        <h3 className="text-[34px] font-bold leading-none tracking-[-1px] text-[#071f52]">
+                            15.8%
+                        </h3>
 
+                        <span className="mb-[5px] text-[10px] font-bold uppercase tracking-wide text-slate-500">
+                            XIRR
+                        </span>
+                    </div>
+
+                    <p className="mt-[7px] text-[11px] font-medium leading-none text-slate-500">
+                        Since Inception
+                    </p>
+
+                    <div className="mt-[17px] h-[42px] w-full overflow-hidden rounded-sm bg-gradient-to-t from-[#eaf2ff] to-white">
+                        <svg viewBox="0 0 220 42" className="h-full w-full">
+                            <path
+                                d="M2 31 C18 29 25 32 40 27 C57 20 69 25 84 20 C101 14 114 19 128 17 C144 15 153 11 168 15 C183 19 191 12 204 8 C211 6 216 7 220 4"
+                                fill="none"
+                                stroke="#2f6de0"
+                                strokeWidth="3"
+                                strokeLinecap="round"
+                            />
+                        </svg>
                     </div>
                 </div>
-
             </div>
         </section>
     )

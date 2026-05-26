@@ -3,7 +3,7 @@ import heroBg from "../assets/sky-city-background.png"
 
 export default function Hero() {
     return (
-        <section className="relative overflow-hidden bg-white pt-28 lg:pt-32">
+        <section className="relative overflow-hidden bg-white pt-[120px]">
             {/* HERO BACKGROUND */}
             <div className="absolute inset-0">
                 <img

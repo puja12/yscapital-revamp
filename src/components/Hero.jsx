@@ -3,21 +3,34 @@ import heroBg from "../assets/sky-city-background.png"
 
 export default function Hero() {
     return (
-        <section className="relative overflow-hidden bg-white pt-[120px]">
+        <section className="relative min-h-[560px] overflow-hidden bg-white pt-[105px]">
+
             {/* HERO BACKGROUND */}
-            <div className="absolute inset-0">
+            <div className="absolute inset-0 overflow-hidden">
+
+                {/* MAIN IMAGE */}
                 <img
                     src={heroBg}
                     alt=""
-                    className="absolute right-0 bottom-0 h-full w-[78%] object-contain object-right-bottom opacity-95"
+                    className="absolute right-[-40px] bottom-0 h-full w-[104%] object-contain object-right-bottom opacity-95"
                 />
 
-                <div className="absolute inset-0 bg-gradient-to-r from-white via-white/35 to-transparent" />
+                {/* SMOOTH LEFT SUBMERGE */}
+                <div className="absolute inset-y-0 left-0 w-[62%] bg-gradient-to-r from-white from-[0%] via-white via-[52%] to-transparent to-[82%]" />
+
+                {/* EXTRA BLEND LAYER */}
+                <div className="absolute left-[33%] top-[8%] h-[420px] w-[420px] rounded-full bg-white/95 blur-[115px]" />
+
+                {/* LOWER ATMOSPHERIC BLEND */}
+                <div className="absolute left-[36%] bottom-[2%] h-[240px] w-[360px] rounded-full bg-white/80 blur-[90px]" />
+                {/* BOTTOM FADE */}
+                <div className="absolute inset-x-0 bottom-0 h-[170px] bg-gradient-to-t from-white via-white/70 to-transparent" />
+
             </div>
             <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center px-6 lg:grid-cols-2">
                 {/* LEFT CONTENT */}
                 <div className="z-10 pb-20 pt-12 lg:pb-24">
-                    <h1 className="font-serif text-[44px] font-bold leading-[1.12] text-[#071f52] md:text-[64px] lg:text-[68px]">
+                    <h1 className="font-serif text-[38px] font-bold leading-[1.12] tracking-[-0.4px] text-[#071f52] md:text-[46px] lg:text-[52px]">
                         Growing Wealth.
                         <br />
 

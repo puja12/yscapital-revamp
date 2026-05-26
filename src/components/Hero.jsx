@@ -8,7 +8,7 @@ import {
     HandCoins,
 } from "lucide-react"
 
-import heroBg from "../assets/serene-sunset-with-stones-background.png"
+import heroBg from "../assets/serene-sunset-with-stones-background-light.png"
 
 const stats = [
     [ShieldCheck, "AMFI Registered", "Mutual Fund Distributor"],

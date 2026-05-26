@@ -28,13 +28,9 @@ const cards = [
 export default function Portfolio() {
     return (
         <section className="relative overflow-hidden bg-white px-6 py-[52px]">
-            {/* left plant decoration 
-            <div className="pointer-events-none absolute bottom-0 left-0 h-[210px] w-[245px] opacity-90">
-                <div className="absolute bottom-[-30px] left-[-40px] h-[220px] w-[160px] rounded-full bg-gradient-to-tr from-[#2f7d26]/25 to-transparent blur-xl" />
-            </div>*/}
+
             {/* LEAF GLOW */}
-            {/* LEAF GLOW */}
-            <div className="pointer-events-none absolute bottom-[-40px] left-[-60px] h-[400px] w-[350px] rounded-full bg-[#dcefd7] blur-[65px]" />
+            <div className="pointer-events-none absolute bottom-[-40px] left-[-60px] h-[350px] w-[300px] rounded-full bg-[#dcefd7] blur-[75px]" />
 
             {/* LEFT LEAF DECORATION */}
             <img

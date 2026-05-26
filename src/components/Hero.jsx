@@ -21,21 +21,18 @@ const stats = [
 
 export default function Hero() {
     return (
-        <section className="relative min-h-[700px] overflow-hidden bg-white pt-[92px]">
-            {/* BACKGROUND IMAGE */}
+        <section className="relative min-h-[860px] overflow-hidden bg-white pt-[86px] sm:min-h-[760px] lg:min-h-[700px] lg:pt-[92px]">
             <img
                 src={heroBg}
                 alt=""
-                className="absolute inset-0 h-full w-full object-cover object-center"
+                className="absolute inset-0 h-full w-full object-cover object-[62%_center] sm:object-center"
             />
 
-            {/* light overlay */}
-            <div className="absolute inset-0 bg-white/10" />
+            <div className="absolute inset-0 bg-white/20 sm:bg-white/10" />
 
-            <div className="relative mx-auto max-w-7xl px-8">
-                {/* CONTENT */}
-                <div className="max-w-[540px] pt-[82px]">
-                    <h1 className="font-serif text-[54px] font-normal leading-[1.05] tracking-[-1.4px] text-[#071f52]">
+            <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
+                <div className="max-w-[540px] pt-[58px] sm:pt-[72px] lg:pt-[82px]">
+                    <h1 className="font-serif text-[38px] font-normal leading-[1.08] tracking-[-0.8px] text-[#071f52] sm:text-[46px] lg:text-[54px] lg:leading-[1.05] lg:tracking-[-1.4px]">
                         Growing Wealth.
                         <br />
                         <span className="text-[#c9971d]">
@@ -43,57 +40,55 @@ export default function Hero() {
                         </span>
                     </h1>
 
-                    <div className="mt-[22px] h-[2px] w-[66px] bg-[#c9971d]" />
+                    <div className="mt-[18px] h-[2px] w-[60px] bg-[#c9971d] sm:mt-[22px] sm:w-[66px]" />
 
-                    <p className="mt-[22px] max-w-[470px] text-[16px] font-medium leading-[25px] text-[#061d49]">
+                    <p className="mt-[18px] max-w-[470px] text-[14px] font-medium leading-[23px] text-[#061d49] sm:mt-[22px] sm:text-[16px] sm:leading-[25px]">
                         Helping HNIs, professionals and business families build disciplined
                         investment portfolios through Mutual Funds, SIFs and goal-based
                         wealth strategies.
                     </p>
 
-                    <div className="mt-[28px] flex gap-4">
-                        <button className="flex h-[46px] items-center gap-3 rounded-[5px] bg-[#003b9e] px-[24px] text-[13px] font-bold text-white shadow-[0_12px_24px_rgba(0,59,158,0.24)]">
+                    <div className="mt-[24px] flex flex-col gap-3 sm:mt-[28px] sm:flex-row sm:gap-4">
+                        <button className="flex h-[46px] items-center justify-center gap-3 rounded-[5px] bg-[#003b9e] px-[24px] text-[13px] font-bold text-white shadow-[0_12px_24px_rgba(0,59,158,0.24)]">
                             Schedule Consultation
                             <ArrowRight size={15} />
                         </button>
 
-                        <button className="flex h-[46px] items-center gap-3 rounded-[5px] border border-[#003b9e] bg-white/80 px-[24px] text-[13px] font-bold text-[#003b9e] backdrop-blur-sm">
+                        <button className="flex h-[46px] items-center justify-center gap-3 rounded-[5px] border border-[#003b9e] bg-white/80 px-[24px] text-[13px] font-bold text-[#003b9e] backdrop-blur-sm">
                             Explore Services
                             <ArrowRight size={15} />
                         </button>
                     </div>
                 </div>
-
-
             </div>
-            {/* STATS BAR */}
-            <div className="absolute bottom-[15px] left-1/2 w-full max-w-7xl -translate-x-1/2 rounded-[16px] border border-white/12 bg-[#02122b]/68 px-6 py-[16px] shadow-[0_20px_40px_rgba(1,8,20,0.18)] backdrop-blur-[10px]">
-                <div className="grid grid-cols-6">
+
+            <div className="absolute bottom-[18px] left-1/2 w-[92%] max-w-7xl -translate-x-1/2 rounded-[16px] border border-white/12 bg-[#02122b]/72 px-4 py-[16px] shadow-[0_20px_40px_rgba(1,8,20,0.18)] backdrop-blur-[10px] sm:px-6">
+                <div className="grid grid-cols-2 gap-y-5 sm:grid-cols-3 lg:grid-cols-6 lg:gap-y-0">
                     {stats.map(([Icon, title, sub], index) => (
                         <div
                             key={title + sub}
-                            className={`flex flex-col items-center justify-center px-4 text-center ${index !== stats.length - 1
-                                ? "border-r border-white/12"
-                                : ""
+                            className={`flex flex-col items-center justify-center px-3 text-center lg:px-4 ${index !== stats.length - 1
+                                    ? "lg:border-r lg:border-white/12"
+                                    : ""
                                 }`}
                         >
                             <Icon
-                                size={34}
+                                size={28}
                                 strokeWidth={1.7}
-                                className="mb-3 text-[#d4a128]"
+                                className="mb-2 text-[#d4a128] sm:size-[32px] lg:size-[34px]"
                             />
 
-                            <h4 className="text-[13px] font-bold leading-tight text-white">
+                            <h4 className="text-[12px] font-bold leading-tight text-white sm:text-[13px]">
                                 {title}
                             </h4>
 
-                            <p className="mt-1 text-[12px] leading-tight text-white/90">
+                            <p className="mt-1 text-[11px] leading-tight text-white/90 sm:text-[12px]">
                                 {sub}
                             </p>
                         </div>
                     ))}
                 </div>
             </div>
-        </section >
+        </section>
     )
 }

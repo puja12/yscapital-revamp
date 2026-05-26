@@ -16,7 +16,7 @@ const featuresRight = [
 
 export default function DigitalAccess() {
     return (
-        <section className="relative overflow-hidden px-0 py-[28px]">
+        <section className="relative overflow-hidden px-0 py-[42px] lg:py-[28px]">
             {/* BACKGROUND IMAGE */}
             <img
                 src={bgTexture}
@@ -26,25 +26,26 @@ export default function DigitalAccess() {
 
             {/* LIGHT OVERLAY */}
             <div className="absolute inset-0 bg-white/[0.04]" />
-            <div className="mx-auto grid max-w-7xl grid-cols-1 items-center lg:grid-cols-[0.9fr_1.45fr]">
+
+            <div className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 px-5 sm:px-8 lg:grid-cols-[0.9fr_1.45fr] lg:gap-0 lg:px-0">
                 {/* LEFT CONTENT */}
-                <div className="z-10 px-8 lg:pl-[34px]">
-                    <p className="text-[13px] font-bold uppercase tracking-[0.6px] text-[#003b9e]">
+                <div className="z-10 lg:pl-[34px]">
+                    <p className="text-[12px] font-bold uppercase tracking-[0.6px] text-[#003b9e] sm:text-[13px]">
                         DIGITAL PORTFOLIO ACCESS
                     </p>
 
-                    <h2 className="mt-[14px] font-serif text-[32px] font-normal leading-[1.08] tracking-[-0.8px] text-[#071f52]">
+                    <h2 className="mt-[12px] font-serif text-[30px] font-normal leading-[1.08] tracking-[-0.8px] text-[#071f52] sm:mt-[14px] sm:text-[32px]">
                         Your Wealth.
                         <br />
                         Always Within Reach.
                     </h2>
 
-                    <p className="mt-[16px] max-w-[430px] text-[14px] font-medium leading-[23px] text-[#061d49]/85">
+                    <p className="mt-[14px] max-w-[430px] text-[13.5px] font-medium leading-[22px] text-[#061d49]/85 sm:mt-[16px] sm:text-[14px] sm:leading-[23px]">
                         Monitor your portfolio, track performance and access reports
                         anytime, anywhere through our secure online platform.
                     </p>
 
-                    <div className="mt-[22px] grid max-w-[560px] grid-cols-1 gap-x-8 gap-y-[12px] md:grid-cols-2">
+                    <div className="mt-[20px] grid max-w-[560px] grid-cols-1 gap-y-[12px] sm:mt-[22px] md:grid-cols-2 md:gap-x-8">
                         <div className="space-y-[12px]">
                             {featuresLeft.map((item) => (
                                 <Feature key={item} text={item} />
@@ -58,18 +59,18 @@ export default function DigitalAccess() {
                         </div>
                     </div>
 
-                    <button className="mt-[24px] flex h-[44px] items-center gap-3 rounded-[5px] bg-[#003b9e] px-[34px] text-[14px] font-bold text-white shadow-[0_12px_24px_rgba(0,59,158,0.22)]">
+                    <button className="mt-[22px] flex h-[44px] w-full items-center justify-center gap-3 rounded-[5px] bg-[#003b9e] px-[28px] text-[14px] font-bold text-white shadow-[0_12px_24px_rgba(0,59,158,0.22)] sm:mt-[24px] sm:w-auto sm:px-[34px]">
                         Request a Demo
                         <ArrowRight size={16} strokeWidth={2.4} />
                     </button>
                 </div>
 
                 {/* RIGHT IMAGE */}
-                <div className="relative min-h-[330px]  items-end">
+                <div className="relative min-h-[260px] sm:min-h-[330px] lg:min-h-[330px]">
                     <img
                         src={deviceImage}
                         alt="Digital portfolio dashboard"
-                        className="absolute bottom-[-80px] right-[-120px] w-[820px] max-w-none object-contain"
+                        className="absolute bottom-[-55px] left-1/2 w-[620px] max-w-none -translate-x-1/2 object-contain sm:bottom-[-70px] sm:w-[760px] lg:bottom-[-80px] lg:left-auto lg:right-[-120px] lg:w-[820px] lg:translate-x-0"
                     />
                 </div>
             </div>
@@ -79,15 +80,13 @@ export default function DigitalAccess() {
 
 function Feature({ text }) {
     return (
-        <div className="flex items-start gap-[9px] text-[13.5px] font-semibold leading-[20px] text-[#061d49]">
+        <div className="flex items-start gap-[9px] text-[13px] font-semibold leading-[20px] text-[#061d49] sm:text-[13.5px]">
             <CheckCircle
                 size={17}
                 strokeWidth={2.5}
                 className="mt-[2px] shrink-0 fill-[#003b9e] text-white"
             />
-
             <span>{text}</span>
         </div>
     )
-
 }

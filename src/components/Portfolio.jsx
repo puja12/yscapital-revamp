@@ -34,7 +34,7 @@ export default function Portfolio() {
             </div>*/}
             {/* LEAF GLOW */}
             {/* LEAF GLOW */}
-            <div className="pointer-events-none absolute bottom-[-40px] left-[-60px] h-[260px] w-[240px] rounded-full bg-[#dcefd7] blur-[65px]" />
+            <div className="pointer-events-none absolute bottom-[-40px] left-[-60px] h-[400px] w-[350px] rounded-full bg-[#dcefd7] blur-[65px]" />
 
             {/* LEFT LEAF DECORATION */}
             <img

@@ -32,41 +32,41 @@ const items = [
 
 export default function Audience() {
     return (
-        <section className="relative overflow-hidden bg-[#021f5a]">
-            <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-[1.05fr_0.95fr]">
-                {/* LEFT SECTION */}
-                <div className="relative px-[58px] py-[46px] text-white">
-                    {/* subtle blue glow */}
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_left,rgba(17,79,175,0.45),transparent_55%)]" />
+        <section className="relative overflow-hidden bg-[#002763]">
+            <div className="grid min-h-[320px] grid-cols-1 lg:grid-cols-[1.35fr_0.85fr]">
+                {/* LEFT CONTENT */}
+                <div className="relative z-10 pl-[150px] pr-[20px] py-[42px] text-white">
+                    <div className="absolute inset-0 bg-[linear-gradient(90deg,#002763_0%,#002763_70%,rgba(0,39,99,0.75)_100%)]" />
 
                     <div className="relative z-10">
                         <p className="text-[11px] font-bold uppercase tracking-[1px] text-[#d4a128]">
                             WHO WE SERVE
                         </p>
 
-                        <h2 className="mt-[10px] max-w-[620px] font-serif text-[34px] font-normal leading-[1.15] tracking-[-0.7px] text-white">
+                        <h2 className="mt-[8px] font-serif text-[30px] font-normal leading-[1.12] tracking-[-0.5px] text-white">
                             Tailored Solutions For Every Stage Of Wealth
                         </h2>
 
-                        {/* ITEMS */}
-                        <div className="mt-[34px] grid grid-cols-4">
+                        <div className="mt-[35px] grid max-w-[760px] grid-cols-4">
                             {items.map(([Icon, title, text], index) => (
                                 <div
                                     key={title}
                                     className={`px-[22px] text-center ${index !== items.length - 1
-                                            ? "border-r border-white/22"
-                                            : ""
+                                        ? "border-r border-white/25"
+                                        : ""
                                         }`}
                                 >
-                                    <div className="mx-auto flex h-[58px] w-[58px] items-center justify-center rounded-full border border-[#d4a128] text-[#d4a128]">
-                                        <Icon size={28} strokeWidth={1.8} />
-                                    </div>
+                                    <Icon
+                                        size={38}
+                                        strokeWidth={1.65}
+                                        className="mx-auto text-[#d4a128]"
+                                    />
 
-                                    <h3 className="mt-[16px] text-[18px] font-bold leading-tight text-white">
+                                    <h3 className="mt-[16px] text-[14px] font-bold leading-tight text-white">
                                         {title}
                                     </h3>
 
-                                    <p className="mx-auto mt-[10px] max-w-[165px] text-[12px] font-medium leading-[20px] text-white/88">
+                                    <p className="mx-auto mt-[9px] max-w-[135px] text-[10.5px] font-medium leading-[17px] text-white/85">
                                         {text}
                                     </p>
                                 </div>
@@ -75,16 +75,15 @@ export default function Audience() {
                     </div>
                 </div>
 
-                {/* RIGHT IMAGE */}
-                <div className="relative min-h-[340px] overflow-hidden">
+                {/* RIGHT IMAGE - EXTREME RIGHT */}
+                <div className="absolute inset-y-0 right-0 hidden w-[46%] lg:block">
                     <img
                         src={familyTree}
                         alt=""
-                        className="absolute inset-0 h-full w-full object-cover"
+                        className="h-full w-full object-cover object-right-center"
                     />
 
-                    {/* soft blend */}
-                    <div className="absolute inset-y-0 left-0 w-[180px] bg-gradient-to-r from-[#021f5a] to-transparent" />
+                    <div className="absolute inset-y-0 left-0 w-[260px] bg-gradient-to-r from-[#002763] via-[#002763]/75 to-transparent" />
                 </div>
             </div>
         </section>

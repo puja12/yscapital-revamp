@@ -6,6 +6,11 @@ import {
     Send,
 } from "lucide-react"
 
+import {
+    FaFacebookF,
+    FaInstagram,
+} from "react-icons/fa"
+
 import logo from "../assets/ys-capital-logo.svg"
 import amfiLogo from "../assets/amfi-logo.png"
 
@@ -30,6 +35,8 @@ export default function Footer() {
 
                     {/* SOCIAL */}
                     <div className="mt-[18px] flex items-center gap-[10px]">
+                        <Social icon={FaFacebookF} />
+                        <Social icon={FaInstagram} />
                         <Social icon={Globe} />
                         <Social icon={Send} />
                     </div>
@@ -161,11 +168,10 @@ export default function Footer() {
 function Social({ icon: Icon }) {
     return (
         <div className="flex h-[28px] w-[28px] items-center justify-center rounded-full border border-white/20 bg-white/6 text-white/80 transition hover:bg-white/12">
-            <Icon size={13} strokeWidth={2.2} />
+            <Icon size={13} />
         </div>
     )
 }
-
 /* CONTACT ITEM */
 function ContactItem({ icon: Icon, text }) {
     return (

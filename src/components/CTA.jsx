@@ -1,5 +1,6 @@
 import { ArrowRight, Phone } from "lucide-react"
 import ctaBg from "../assets/cta-mountain-bg.png"
+import { motion } from "framer-motion"
 
 export default function CTA() {
     return (
@@ -26,15 +27,25 @@ export default function CTA() {
                     </div>
 
                     <div className="flex flex-col gap-3 sm:flex-row sm:items-center lg:gap-[18px]">
-                        <button className="flex h-[46px] w-full items-center justify-center gap-[10px] rounded-[4px] bg-[#c9971d] px-[20px] text-[14px] font-semibold text-white shadow-[0_8px_18px_rgba(0,0,0,0.22)] sm:w-auto lg:h-[50px] lg:min-w-[222px] lg:text-[15px]">
-                            Schedule Consultation
-                            <ArrowRight size={18} strokeWidth={2.4} />
-                        </button>
 
-                        <button className="flex h-[46px] w-full items-center justify-center gap-[10px] rounded-[4px] border border-white/55 bg-[#002b7a]/25 px-[20px] text-[14px] font-semibold text-white sm:w-auto lg:h-[50px] lg:min-w-[172px] lg:text-[15px]">
+                        <motion.button
+                            whileHover={{ y: -2, scale: 1.02 }}
+                            whileTap={{ scale: 0.98 }}
+                            className="flex h-[46px] w-full items-center justify-center gap-[10px] rounded-[4px] bg-[#c9971d] px-[20px] text-[14px] font-semibold text-white shadow-[0_8px_18px_rgba(0,0,0,0.22)] sm:w-auto lg:h-[50px] lg:min-w-[222px] lg:text-[15px]"
+                        >
+                            Schedule Consultation
+                            <ArrowRight size={15} />
+                        </motion.button>
+
+                        <motion.button
+                            whileHover={{ y: -2, scale: 1.02 }}
+                            whileTap={{ scale: 0.98 }}
+                            className="flex h-[46px] w-full items-center justify-center gap-[10px] rounded-[4px] border border-white/55 bg-[#002b7a]/25 px-[20px] text-[14px] font-semibold text-white sm:w-auto lg:h-[50px] lg:min-w-[172px] lg:text-[15px]"
+                        >
                             <Phone size={17} strokeWidth={2.4} />
                             Call Us Today
-                        </button>
+                        </motion.button>
+
                     </div>
                 </div>
             </div>

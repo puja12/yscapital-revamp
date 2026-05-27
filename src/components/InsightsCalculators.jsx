@@ -1,3 +1,5 @@
+import { motion } from "framer-motion"
+
 import {
     ArrowRight,
     Calculator,
@@ -48,25 +50,68 @@ const calculators = [
     },
 ]
 
+const container = {
+    hidden: {},
+    show: {
+        transition: {
+            staggerChildren: 0.14,
+        },
+    },
+}
+
+const fadeUp = {
+    hidden: {
+        opacity: 0,
+        y: 35,
+    },
+    show: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.65,
+            ease: "easeOut",
+        },
+    },
+}
+
 export default function InsightsCalculators() {
     return (
-        <section className="bg-white px-6 py-[34px]">
+        <motion.section
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.18 }}
+            className="bg-white px-6 py-[34px]"
+        >
             <div className="mx-auto grid max-w-7xl grid-cols-1 gap-[42px] lg:grid-cols-[1.1fr_0.9fr]">
                 {/* LEFT ARTICLES */}
-                <div>
-                    <p className="text-[12px] font-bold uppercase tracking-[0.8px] text-[#003b9e]">
+                <motion.div variants={container}>
+                    <motion.p
+                        variants={fadeUp}
+                        className="text-[12px] font-bold uppercase tracking-[0.8px] text-[#003b9e]"
+                    >
                         INSIGHTS THAT HELP YOU INVEST BETTER
-                    </p>
+                    </motion.p>
 
-                    <div className="mt-[24px] grid grid-cols-1 gap-[22px] md:grid-cols-3">
+                    <motion.div
+                        variants={container}
+                        className="mt-[24px] grid grid-cols-1 gap-[22px] md:grid-cols-3"
+                    >
                         {articles.map((article) => (
-                            <div
+                            <motion.div
                                 key={article.title}
+                                variants={fadeUp}
+                                whileHover={{
+                                    y: -8,
+                                    scale: 1.02,
+                                    transition: { duration: 0.25 },
+                                }}
                                 className="overflow-hidden rounded-[10px] border border-[#e1e5ee] bg-white shadow-[0_2px_8px_rgba(15,23,42,0.03)]"
                             >
-                                <img
+                                <motion.img
                                     src={article.image}
                                     alt=""
+                                    whileHover={{ scale: 1.08 }}
+                                    transition={{ duration: 0.4 }}
                                     className="h-[112px] w-full object-cover"
                                 />
 
@@ -84,41 +129,70 @@ export default function InsightsCalculators() {
                                         <ArrowRight size={15} />
                                     </button>
                                 </div>
-                            </div>
+                            </motion.div>
                         ))}
-                    </div>
+                    </motion.div>
 
-                    <button className="mx-auto mt-[22px] flex items-center gap-[10px] text-[15px] font-bold text-[#003b9e]">
+                    <motion.button
+                        variants={fadeUp}
+                        whileHover={{ x: 5 }}
+                        className="mx-auto mt-[22px] flex items-center gap-[10px] text-[15px] font-bold text-[#003b9e]"
+                    >
                         View All Articles
                         <ArrowRight size={18} />
-                    </button>
-                </div>
+                    </motion.button>
+                </motion.div>
 
                 {/* RIGHT CALCULATORS */}
-                <div className="border-l border-[#e1e5ee] pl-[46px]">
-                    <p className="text-[12px] font-bold uppercase tracking-[0.8px] text-[#003b9e]">
+                <motion.div
+                    variants={container}
+                    className="border-l border-[#e1e5ee] pl-[46px]"
+                >
+                    <motion.p
+                        variants={fadeUp}
+                        className="text-[12px] font-bold uppercase tracking-[0.8px] text-[#003b9e]"
+                    >
                         PLAN WITH CONFIDENCE
-                    </p>
+                    </motion.p>
 
-                    <h2 className="mt-[20px] max-w-[520px] font-serif text-[22px] font-normal leading-[30px] tracking-[-0.3px] text-[#071f52]">
+                    <motion.h2
+                        variants={fadeUp}
+                        className="mt-[20px] max-w-[520px] font-serif text-[22px] font-normal leading-[30px] tracking-[-0.3px] text-[#071f52]"
+                    >
                         Use our financial calculators to estimate future wealth, SIP growth
                         and retirement readiness.
-                    </h2>
+                    </motion.h2>
 
-                    <div className="mt-[24px] grid grid-cols-1 gap-[20px] md:grid-cols-3">
+                    <motion.div
+                        variants={container}
+                        className="mt-[24px] grid grid-cols-1 gap-[20px] md:grid-cols-3"
+                    >
                         {calculators.map((item) => {
                             const Icon = item.icon
 
                             return (
-                                <div
+                                <motion.div
                                     key={item.title}
+                                    variants={fadeUp}
+                                    whileHover={{
+                                        y: -8,
+                                        scale: 1.03,
+                                        transition: { duration: 0.25 },
+                                    }}
                                     className="flex min-h-[175px] flex-col items-center justify-center rounded-[10px] border border-[#e1e5ee] bg-white px-[18px] py-[20px] text-center shadow-[0_2px_8px_rgba(15,23,42,0.03)]"
                                 >
-                                    <Icon
-                                        size={42}
-                                        strokeWidth={1.8}
-                                        className={item.color}
-                                    />
+                                    <motion.div
+                                        whileHover={{
+                                            rotate: 8,
+                                            scale: 1.1,
+                                        }}
+                                    >
+                                        <Icon
+                                            size={42}
+                                            strokeWidth={1.8}
+                                            className={item.color}
+                                        />
+                                    </motion.div>
 
                                     <h3 className="mt-[14px] font-serif text-[18px] font-bold leading-[20px] text-[#071f52]">
                                         {item.title}
@@ -127,17 +201,21 @@ export default function InsightsCalculators() {
                                     <p className="mt-[12px] text-[12px] font-medium leading-[18px] text-slate-600">
                                         {item.text}
                                     </p>
-                                </div>
+                                </motion.div>
                             )
                         })}
-                    </div>
+                    </motion.div>
 
-                    <button className="mx-auto mt-[20px] flex items-center gap-[10px] text-[15px] font-bold text-[#003b9e]">
+                    <motion.button
+                        variants={fadeUp}
+                        whileHover={{ x: 5 }}
+                        className="mx-auto mt-[20px] flex items-center gap-[10px] text-[15px] font-bold text-[#003b9e]"
+                    >
                         Explore All Calculators
                         <ArrowRight size={18} />
-                    </button>
-                </div>
+                    </motion.button>
+                </motion.div>
             </div>
-        </section>
+        </motion.section>
     )
 }

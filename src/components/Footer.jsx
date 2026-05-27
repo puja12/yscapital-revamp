@@ -11,7 +11,7 @@ import {
     FaInstagram,
 } from "react-icons/fa"
 
-import logo from "../assets/ys-capital-logo.svg"
+import logo from "../assets/yscapital-logo.svg"
 import amfiLogo from "../assets/amfi-logo.png"
 
 export default function Footer() {
